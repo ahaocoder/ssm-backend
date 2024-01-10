@@ -19,6 +19,6 @@ public class Worker {
     @TableField("position")
     private String position;
 
-    @TableField("desc")
-    private String desc;
+    @TableField("description")
+    private String description;
 }

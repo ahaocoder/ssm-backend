@@ -13,7 +13,7 @@ public class Hygrometer {
     private Long id;
 
     @TableField("humidity")
-    private String name;
+    private String humidity;
 
     @TableField("seat")
     private String seat;
