@@ -1,6 +1,6 @@
 package com.example.granary.controller;
 
-import com.example.granary.model.form.UserForm;
+import com.example.granary.model.dto.UserDto;
 import com.example.granary.service.UserService;
 import com.example.granary.util.result.Result;
 import lombok.AllArgsConstructor;
@@ -18,7 +18,7 @@ public class UserController {
     }
 
     @PostMapping("/api/login")
-    public Result<String> login(@RequestBody UserForm userForm) {
-        return userService.login(userForm);
+    public Result<String> login(@RequestBody UserDto userDto) {
+        return userService.login(userDto);
     }
 }

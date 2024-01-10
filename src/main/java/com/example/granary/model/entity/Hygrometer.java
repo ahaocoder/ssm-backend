@@ -12,7 +12,7 @@ public class Hygrometer {
     @TableId(type = IdType.AUTO)
     private Long id;
 
-    @TableField("humidity")
+    @TableField("humidity") // 湿度
     private String humidity;
 
     @TableField("seat")

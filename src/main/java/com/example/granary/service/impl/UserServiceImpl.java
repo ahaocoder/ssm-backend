@@ -3,7 +3,7 @@ package com.example.granary.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.granary.model.entity.User;
 import com.example.granary.mapper.UserMapper;
-import com.example.granary.model.form.UserForm;
+import com.example.granary.model.dto.UserDto;
 import com.example.granary.service.UserService;
 import com.example.granary.util.result.Result;
 import com.example.granary.util.result.ResultUtil;
@@ -17,13 +17,13 @@ import java.util.Objects;
 public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
 
-    public Result<String> login(UserForm userForm) {
+    public Result<String> login(UserDto userDto) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("username", userForm.getUsername());
+        queryWrapper.eq("username", userDto.getUsername());
         User user = userMapper.selectOne(queryWrapper);
 
         if (user != null) {
-            if (Objects.equals(user.getPassword(), userForm.getPassword())) {
+            if (Objects.equals(user.getPassword(), userDto.getPassword())) {
                 return ResultUtil.createResult(200, "登录成功", "Token");
             }
         } else {
