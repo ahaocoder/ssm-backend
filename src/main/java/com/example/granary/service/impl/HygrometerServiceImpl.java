@@ -1,7 +1,6 @@
 package com.example.granary.service.impl;
 
 import com.example.granary.mapper.HygrometerMapper;
-import com.example.granary.mapper.UserMapper;
 import com.example.granary.model.entity.Hygrometer;
 import com.example.granary.service.HygrometerService;
 import com.example.granary.util.result.Result;
