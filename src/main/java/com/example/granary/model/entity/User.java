@@ -1,4 +1,4 @@
-package com.example.granary.entity;
+package com.example.granary.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

@@ -1,8 +1,9 @@
 package com.example.granary.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.example.granary.entity.User;
+import com.example.granary.model.entity.User;
 import com.example.granary.mapper.UserMapper;
+import com.example.granary.model.form.UserForm;
 import com.example.granary.service.UserService;
 import com.example.granary.util.result.Result;
 import com.example.granary.util.result.ResultUtil;
@@ -16,7 +17,7 @@ import java.util.Objects;
 public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
 
-    public Result<String> login(User userForm) {
+    public Result<String> login(UserForm userForm) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username", userForm.getUsername());
         User user = userMapper.selectOne(queryWrapper);
