@@ -1,6 +1,5 @@
 package com.example.granary.controller;
 
-import com.example.granary.model.entity.User;
 import com.example.granary.model.form.UserForm;
 import com.example.granary.service.UserService;
 import com.example.granary.util.result.Result;
