@@ -22,9 +22,4 @@ public class UserController {
     public Result<String> login(@RequestBody UserForm userForm) {
         return userService.login(userForm);
     }
-
-    @GetMapping("/api/getUser")
-    public Result<User> getUser() {
-        return userService.getUser();
-    }
 }
