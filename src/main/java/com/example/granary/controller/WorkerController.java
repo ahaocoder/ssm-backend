@@ -6,7 +6,6 @@ import com.example.granary.service.WorkerService;
 import com.example.granary.util.result.Result;
 import com.example.granary.util.result.ResultUtil;
 import lombok.AllArgsConstructor;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
